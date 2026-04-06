@@ -1,16 +1,48 @@
-# React + Vite
+# Worcspace Knowledge Base UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React front-end application replicating a Knowledge Base management screen, built with **React** and **Tailwind CSS v4**.
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Screen 1 — Home Screen (Knowledge Base)
+![Home Screen](public/image1.png)
 
-## React Compiler
+### Screen 2 — Create New Knowledge Base (Modal)
+![Create New Modal](public/image.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19** — functional components + hooks
+- **Tailwind CSS v4** — via `@tailwindcss/vite` plugin
+- **Vite 8** — dev server & bundler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Icons.jsx          # All SVG icon components
+│   ├── Navbar.jsx         # Top navigation bar
+│   ├── Sidebar.jsx        # Left sidebar with nav sections
+│   ├── KnowledgeCard.jsx  # Individual knowledge base card
+│   ├── CreateNewModal.jsx # Slide-in modal for creating a KB
+│   └── Pagination.jsx     # Pagination footer
+├── App.jsx                # Root component & state
+├── main.jsx
+└── index.css
+```
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Features
+
+- Responsive layout (mobile sidebar drawer + desktop fixed sidebar)
+- Search / filter knowledge base cards
+- "Create New" slide-in panel with form validation
+- Card context menu (Edit, Duplicate, Delete)
+- Pagination footer with rows-per-page selector
